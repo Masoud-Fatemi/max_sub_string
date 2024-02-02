@@ -4,6 +4,9 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
+        if s == " " or len(s) == 1:
+            return 1
+
         s = list(s)
         sub = []
         max_length = 0
@@ -19,4 +22,4 @@ class Solution(object):
                     sub = []
                     break
 
-        return len(sub)
+        return max_length
